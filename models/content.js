@@ -12,4 +12,5 @@ const contentSchema = new mongoose.Schema({
 });
 const content =  mongoose.model('text' , contentSchema);
 
-module.exports = content ;
+// module.exports = content ;
+export default content;
