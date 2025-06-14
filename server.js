@@ -232,5 +232,5 @@ app.post('/pdf', upload.single('file') ,(req, res) => {
 
 
 app.listen(5000 , (req ,res) =>{
-   console.log('http://localhost:5000');
+   console.log('https://ai-model-5.onrender.com');
 })
