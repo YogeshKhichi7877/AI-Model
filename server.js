@@ -1,3 +1,5 @@
+import express from 'express';
+const app = express();
 import cors from 'cors';
 app.use(cors());
 
@@ -9,7 +11,7 @@ import { GoogleGenAI } from "@google/genai";
 
 import * as fs from 'fs';
 
-import express from 'express';
+
 // import db from './db.js';
 import Content from './models/content.js';
 import bodyParser from 'body-parser';
@@ -20,7 +22,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const app = express();
+
 app.use(bodyParser.json());
 app.use(express.static(__dirname)); // Now this works!
 
