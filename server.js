@@ -7,7 +7,7 @@ import { GoogleGenAI } from "@google/genai";
 import * as fs from 'fs';
 // import { GoogleGenAI, Modality } from "@google/genai";
 import express from 'express';
-import db from './db.js';
+// import db from './db.js';
 import Content from './models/content.js';
 import cors from 'cors';
 import bodyParser from 'body-parser';
