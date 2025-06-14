@@ -24,4 +24,5 @@ db.on('disconnected' , ()=>{
     console.log("server disconnected");
 })
 
-module.exports = db ;
+// module.exports = db ;
+export default db;
