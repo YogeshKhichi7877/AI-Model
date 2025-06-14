@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 require('dotenv').config();
-
+import mongoose from 'mongoose' ;
 const mongoUrl = 'mongodb://localhost:27017/AI-Model' ;
 
 mongoose.connect(mongoUrl , {
