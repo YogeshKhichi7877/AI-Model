@@ -5,10 +5,7 @@ dotenv.config();
 import mongoose from 'mongoose' ;
 const mongoUrl = 'mongodb://localhost:27017/AI-Model' ;
 
-mongoose.connect(mongoUrl , {
-    useNewUrlParser : true ,
-    useUnifiedTopology : true 
-});
+mongoose.connect(mongoUrl);
 
 const db = mongoose.connection ;
 
