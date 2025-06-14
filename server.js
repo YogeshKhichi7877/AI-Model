@@ -1,15 +1,17 @@
+import cors from 'cors';
+app.use(cors());
+
 import dotenv from 'dotenv';
 dotenv.config();
 import multer from 'multer';
 import { GoogleGenAI } from "@google/genai";
-//import * as fs from "node:fs";
+
 
 import * as fs from 'fs';
-// import { GoogleGenAI, Modality } from "@google/genai";
+
 import express from 'express';
 // import db from './db.js';
 import Content from './models/content.js';
-import cors from 'cors';
 import bodyParser from 'body-parser';
 
 // Fix for __dirname in ES modules:
@@ -19,9 +21,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-app.use(cors());
 app.use(bodyParser.json());
-
 app.use(express.static(__dirname)); // Now this works!
 
 
@@ -232,5 +232,5 @@ app.post('/pdf', upload.single('file') ,(req, res) => {
 
 
 app.listen(5000 , (req ,res) =>{
-   console.log('https://ai-model-5.onrender.com');
+   console.log('https://ai-model-6.onrender.com');
 })
