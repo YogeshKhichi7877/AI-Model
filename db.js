@@ -1,27 +1,28 @@
-// const mongoose = require('mongoose');
-// import dotenv from 'dotenv';
-// dotenv.config();
+import mongoose from 'mongoose' ;
+import dotenv from 'dotenv';
+dotenv.config();
 
-// import mongoose from 'mongoose' ;
-// const mongoUrl = 'mongodb://localhost:27017/AI-Model' ;
+const mongoUrl = "mongodb+srv://lalitkhichi796:lalit526@cluster0.pmaofkq.mongodb.net/" ;
 
-// mongoose.connect(mongoUrl);
+mongoose.connect(mongoUrl , {
+    useNewUrlParser : true ,
+    useUnifiedTopology : true 
+});
 
-// const db = mongoose.connection ;
+const db = mongoose.connection ;
 
-// //define event listeners on the database connection .
+//define event listeners on the database connection .
 
-// db.on('connected' , ()=>{
-//     console.log("connected to the mongoose server ");
-// })
+db.on('connected' , ()=>{
+    console.log("connected to the mongoose server ");
+})
 
-// db.on('error' , (err)=>{
-//     console.log("an error accured " , err)
-// })
+db.on('error' , (err)=>{
+    console.log("an error accured " , err)
+})
 
-// db.on('disconnected' , ()=>{
-//     console.log("server disconnected");
-// })
+db.on('disconnected' , ()=>{
+    console.log("server disconnected");
+})
 
-// // module.exports = db ;
-// export default db;
+export default db;

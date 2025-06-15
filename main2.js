@@ -26,7 +26,7 @@ document.getElementById('btn').addEventListener('click', async () => {
         
         console.log(userText);
         showLoader();
-        const response = await fetch('https://ai-model-6.onrender.com/code', {
+        const response = await fetch('https://ai-model-8.onrender.com/code', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: userText }) 

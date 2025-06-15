@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Chat Box Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --main-bg: #7a879a;
+      --card-bg: rgba(240, 236, 232, 0.92);
+      --accent: #f39209;
+      --text-dark: #444;
+      --border-radius: 28px;
+      --shadow: 0 8px 32px 0 rgba(31,38,135,0.12);
+      --popup: popup 0.7s cubic-bezier(.7,-0.2,.3,1.4);
+    }
+    body {
+      background: var(--main-bg);
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    @keyframes popup {
+      0% { opacity: 0; transform: scale(0.85) translateY(60px);}
+      80% { opacity: 1; transform: scale(1.04) translateY(-8px);}
+      100% { opacity: 1; transform: scale(1) translateY(0);}
+    }
+    .login-modal-bg {
+      position: fixed;
+      inset: 0;
+      background: rgba(60, 70, 90, 0.13);
+      z-index: 0;
+    }
+    .login-box {
+      position: relative;
+      z-index: 1;
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      padding: 2.2rem 2.2rem 2rem 2.2rem;
+      max-width: 350px;
+      width: 95vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: var(--popup);
+      border: 2.5px solid #4442;
+      backdrop-filter: blur(7px);
+      -webkit-backdrop-filter: blur(7px);
+    }
+    .login-logo {
+      font-size: 2.3rem;
+      margin-bottom: 1.1rem;
+      color: var(--accent);
+      background: #fff3;
+      border-radius: 50%;
+      padding: 0.6rem 0.9rem;
+      box-shadow: 0 4px 20px #f3920922;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 1px;
+      margin-bottom: 1.6rem;
+      text-align: center;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 0.4rem;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 1rem;
+      letter-spacing: 0.1px;
+    }
+    input[type="text"], input[type="password"], input[type="number"] {
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #e9e8e6;
+  box-shadow: 0 2px 8px #8881;
+  outline: none;
+  color: #222;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus {
+  background: #fff;
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+    button {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.8rem 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.08rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 0.3rem;
+      box-shadow: 0 2px 8px #f3920933;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    button:hover {
+      background: #e07a00;
+      box-shadow: 0 4px 18px #f3920930;
+    }
+    .signup-link {
+      margin-top: 1.2rem;
+      font-size: 0.97rem;
+      color: #555;
+      text-align: center;
+    }
+    .signup-link a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 4px;
+      transition: color 0.18s;
+    }
+    .signup-link a:hover {
+      color: #b05e00;
+    }
+    @media (max-width: 500px) {
+      .login-box {
+        padding: 1.3rem 0.7rem;
+      }
+      .login-logo {
+        font-size: 1.4rem;
+        padding: 0.4rem 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-modal-bg"></div>
+  <div class="login-box">
+    <div class="login-logo">🤖</div>
+    <div class="login-title">AI CHAT BOX Login</div>
+  <form>
+  <label for="username">Username</label>
+  <input type="text" id="username" name="username" required autocomplete="username">
+
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" required autocomplete="current-password">
+
+
+  <button type="submit">Login</button>
+</form>
+
+    <div class="signup-link">
+      Don't have an account?
+      <a href="signup.html">Sign up</a>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
